@@ -21,7 +21,8 @@ const forecast = (coordinates, callback) => {
         " degrees out. It feels like " +
         feelslike +
         " degrees out.";
-      callback(undefined, weatherStatement);
+      const weatherLogo = body.current.weather_icons[0];
+      callback(undefined, { weatherStatement, weatherLogo });
     }
   });
 };
